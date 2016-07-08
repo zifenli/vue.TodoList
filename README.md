@@ -1,6 +1,6 @@
 #vue.README
 
-> A Vue.js project
+> A Vue.TodoList project
 
 ## Build Setup
 
