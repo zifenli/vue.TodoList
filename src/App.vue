@@ -7,7 +7,7 @@
             事件: <input class="input" type="text" v-model="ToDo.name">
           </div>
           <div class="horiControl">
-            时间: <input class="input" type="text" v-model="ToDo.time">
+            时间: <input class="input" type="date" v-model="ToDo.time">
           </div>
           <div class="btnWraper">
             <span href="" class="btn" v-on:click="addMember()">添加</span>
@@ -29,8 +29,8 @@
             <tr v-for="item in ToDos" track-by="$index" v-if="item.status==tabIndex">
               <td>{{item.name}}</td>
               <td>{{item.time}}</td>
-              <td v-if="tabIndex==1"><a class="s-blue" v-on:click="operateMember(item,2)">删除</a></td>
-              <td v-if="tabIndex==2"><a class="s-blue" v-on:click="operateMember(item,1)">恢复</a></td>
+              <td v-if="tabIndex==1"><a class="s-blue" v-on:click="operate(item,2)">完成</a></td>
+              <td v-if="tabIndex=2="><a class="s-blue" v-on:click="operate(item,1)">待完成</a></td>
             </tr>
           </table>
         </div>
@@ -64,7 +64,7 @@
       changePanel: function (index) {
         this.tabIndex = index
       },
-      operateMember:function(item,type){
+      operate:function(item,type){
         this.ToDos.find(function(value, index, arr){
             if(value.id==item.id) value.status=type;
             return !1;
