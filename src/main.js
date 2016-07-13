@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
-import ModuleDetail from './components/moduleDetail.vue'
+import alerts from './components/alerts.vue'
 import ModuleItem from './components/moduleItem.vue'
 
 Vue.use(Router)
@@ -9,8 +9,8 @@ Vue.use(Router)
 var router = new Router()
 
 router.map({
-  '/modules/:id': {
-    component: ModuleDetail
+  '/alerts': {
+    component: alerts
   },
   '/modules/:id/detail': {
     component: ModuleItem
@@ -18,7 +18,7 @@ router.map({
 })
 
 router.redirect({
-  '*': '/modules/1'
+  '*': '/alerts'
 })
 
 /* eslint-disable no-new */

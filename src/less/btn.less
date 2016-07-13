@@ -1,0 +1,7 @@
+//每个btn由div+a组成
+.btn-mixin(@width,@height,@bgColor,@color,@fSize){display: inline-block;width: @width;height: @height;background-color:@bgColor;text-align: center;cursor: pointer;
+  .a{display:inline-block;font-size:@fSize;color:@color;line-height: @height;}
+}
+.m-horiBtnGroup{display: inline-block;
+  .btn{.btn-mixin(120px,40px,#0db14b,white,16px); }
+}
