@@ -1,6 +1,12 @@
 .m-main{
-  .left{position:absolute;top:0;left:0;bottom:0;padding-top:100px;width:300px;background-color: white;}
-  .right{position:absolute;top:0;right:0;bottom:0;left:300px;padding-top:30px;background-color: #eee;}
+  .left{position:absolute;top:0;left:0;bottom:0;width:300px;background-color: white;
+    &.flex{display: flex;flex-direction:column;align-items:center;align-content:space-around;justify-content: center;
+    }
+  }
+  .right{position:absolute;top:0;right:0;bottom:0;left:300px;padding-top:30px;background-color: #eee;
+    &.flex{display: flex;flex-direction:column;align-items:center;align-content:space-around;justify-content: center;
+    }
+  }
 }
 .f-cf{
   &:after{content:'';display:block;height:0;clear:both;visibility:hidden;}

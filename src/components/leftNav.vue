@@ -1,6 +1,8 @@
 <template>
-  <div v-for="item in modules">
-    <a v-on:click="changeView(item)" >{{item.name}}</a>
+  <div class="m-nav" v-for="item in modules">
+    <div class="navItem">
+       <a class="a" v-on:click="changeView(item)" >{{item.name}}</a>
+    </div>
   </div>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div class="m-main f-cf">
-      <div class="left">
+      <div class="left flex">
         <left-nav :modules="modules"></left-nav>
       </div>
-      <div class="right">
+      <div class="right flex">
         <router-view
           class="view"
           keep-alive
