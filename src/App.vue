@@ -33,6 +33,7 @@
 
 <style>
   @import "./css/reset.css";
+  @import "./css/galleryColumns.css";
 </style>
 
 <style lang="less">

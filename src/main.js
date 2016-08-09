@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
 import alerts from './components/alerts.vue'
-import ModuleItem from './components/moduleItem.vue'
+import galleryColumns from './components/galleryColumns.vue'
 import picGame from './components/picGame.vue'
 
 Vue.use(Router)
@@ -16,8 +16,8 @@ router.map({
   '/pic/game': {
     component: picGame
   },
-  '/modules/:id/detail': {
-    component: ModuleItem
+  '/gallery/columns': {
+    component: galleryColumns
   }
 })
 
